@@ -3,20 +3,35 @@
 <head>
   <meta charset="utf-8">
   
-  <title>新的开始2333 | Hexo</title>
+  <title>hexo搭建的静态博客 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sssssa啊">
+  <meta name="description" content="#前言使用hexo搭建的静态博客。。
+这两天也是折腾死了，
+其实到最后并不是很难，主要是github和git的使用之前不是很熟,git的问题查了很多网站，然而最后还是没有解决ssh传输的问题于是每次更新都要输入用户密码。。。回来再研究一下吧
+###—-待更—-
+#多说评论hexo的自带的评论据说是Disqus，大家的评价也很高。但是由于。。公所周知的不可说之墙，找了国内的多说
+多说 http://">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新的开始2333">
+<meta property="og:title" content="hexo搭建的静态博客">
 <meta property="og:url" content="http://yoursite.com/nodejs-hexo/2014/05/07/aaa/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="sssssa啊">
-<meta property="og:updated_time" content="2015-08-03T06:24:51.160Z">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="#前言使用hexo搭建的静态博客。。
+这两天也是折腾死了，
+其实到最后并不是很难，主要是github和git的使用之前不是很熟,git的问题查了很多网站，然而最后还是没有解决ssh传输的问题于是每次更新都要输入用户密码。。。回来再研究一下吧
+###—-待更—-
+#多说评论hexo的自带的评论据说是Disqus，大家的评价也很高。但是由于。。公所周知的不可说之墙，找了国内的多说
+多说 http://">
+<meta property="og:updated_time" content="2015-08-10T10:01:51.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新的开始2333">
-<meta name="twitter:description" content="sssssa啊">
+<meta name="twitter:title" content="hexo搭建的静态博客">
+<meta name="twitter:description" content="#前言使用hexo搭建的静态博客。。
+这两天也是折腾死了，
+其实到最后并不是很难，主要是github和git的使用之前不是很熟,git的问题查了很多网站，然而最后还是没有解决ssh传输的问题于是每次更新都要输入用户密码。。。回来再研究一下吧
+###—-待更—-
+#多说评论hexo的自带的评论据说是Disqus，大家的评价也很高。但是由于。。公所周知的不可说之墙，找了国内的多说
+多说 http://">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,8 +49,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">jd&#39; blog</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -78,7 +97,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      新的开始2333
+      hexo搭建的静态博客
     </h1>
   
 
@@ -86,37 +105,82 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>sssssa啊</p>
-
+        <p>#前言<br>使用hexo搭建的静态博客。。</p>
+<p>这两天也是折腾死了，</p>
+<p>其实到最后并不是很难，主要是github和git的使用之前不是很熟,git的问题查了很多网站，然而最后还是没有解决ssh传输的问题<br>于是每次更新都要输入用户密码。。。回来再研究一下吧</p>
+<p>###—-待更—-</p>
+<p>#多说评论<br>hexo的自带的评论据说是Disqus，大家的评价也很高。但是由于。。公所周知的不可说之墙，找了国内的多说</p>
+<p>多说 <a href="http://dev.duoshuo.com/" target="_blank" rel="external">http://dev.duoshuo.com/</a></p>
+<p>也有说多说评价一般般的。。总之先用着吧</p>
+<p>找到“创建站点获取通用代码”，创建站点，记住你的short_name，就是“站点名称”</p>
+<p>然后根据教程 <a href="http://dev.duoshuo.com/threads/541d3b2b40b5abcd2e4df0e9" target="_blank" rel="external">Hexo使用多说教程</a></p>
+<p>在 <code>_config.yml</code> 中添加多说的配置：</p>
+<pre><code><span class="attribute">duoshuo_shortname</span>: <span class="string">你站点的short_name</span>
+</code></pre><p>修改 <code>themes\landscape\layout\_partial\article.ejs</code> 模板</p>
+<p>把</p>
+<pre><code><span class="xml"></span>&lt;%<span class="perl"> <span class="keyword">if</span> (!<span class="keyword">index</span> &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ </span>%&gt;<span class="xml">
+<span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+</span>&lt;%<span class="perl"> } </span>%&gt;<span class="xml"></span>
+</code></pre><p>改为</p>
+<pre><code><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.duoshuo_shortname</span>){ %&gt;</span>
+<span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span>
+  <span class="comment">&lt;!-- 多说评论框 start --&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= post.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%= page.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="comment">&lt;!-- 多说评论框 end --&gt;</span>
+  <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+  <span class="keyword">var</span> duoshuoQuery = {short_name:<span class="string">'&lt;%= config.duoshuo_shortname %&gt;'</span>};
+    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+      <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);
+      ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;
+      ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;
+      ds.charset = <span class="string">'UTF-8'</span>;
+      (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] 
+       || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);
+    })();
+    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span>
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+<span class="tag">&lt;<span class="title">%</span> } %&gt;</span>
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/nodejs-hexo/2014/05/07/aaa/" data-id="cicx4yof9000basowhh02qai6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/nodejs-hexo/2014/05/07/aaa/" data-id="cid5o7juf000a34owx5y98ndj" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nodejs-hexo/tags/开始/">开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nodejs-hexo/tags/我/">我</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nodejs-hexo/tags/日记/">日记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nodejs-hexo/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nodejs-hexo/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nodejs-hexo/tags/日记/">日记</a></li></ul>
 
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/nodejs-hexo/2014/05/07/hello/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          新的开始
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
+
+<section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-aaa" data-title="hexo搭建的静态博客" data-url="http://yoursite.com/nodejs-hexo/2014/05/07/aaa/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iaea'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
 </section>
         
           <aside id="sidebar">
@@ -125,7 +189,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/nodejs-hexo/categories/日志/">日志</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/nodejs-hexo/categories/日志/">日志</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -134,7 +198,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/nodejs-hexo/tags/开始/">开始</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/nodejs-hexo/tags/我/">我</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/nodejs-hexo/tags/日记/">日记</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/nodejs-hexo/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/nodejs-hexo/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/nodejs-hexo/tags/日记/">日记</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -143,7 +207,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/nodejs-hexo/tags/开始/" style="font-size: 10px;">开始</a> <a href="/nodejs-hexo/tags/我/" style="font-size: 10px;">我</a> <a href="/nodejs-hexo/tags/日记/" style="font-size: 10px;">日记</a>
+      <a href="/nodejs-hexo/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/nodejs-hexo/tags/前端/" style="font-size: 10px;">前端</a> <a href="/nodejs-hexo/tags/日记/" style="font-size: 10px;">日记</a>
     </div>
   </div>
 
@@ -152,7 +216,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/nodejs-hexo/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/nodejs-hexo/archives/2014/05/">May 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/nodejs-hexo/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -164,19 +228,7 @@
       <ul>
         
           <li>
-            <a href="/nodejs-hexo/2015/08/03/aa/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/nodejs-hexo/2015/08/03/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/nodejs-hexo/2014/05/07/hello/">新的开始</a>
-          </li>
-        
-          <li>
-            <a href="/nodejs-hexo/2014/05/07/aaa/">新的开始2333</a>
+            <a href="/nodejs-hexo/2014/05/07/aaa/">hexo搭建的静态博客</a>
           </li>
         
       </ul>
@@ -191,7 +243,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 John Doe<br>
+      &copy; 2015 JD<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
